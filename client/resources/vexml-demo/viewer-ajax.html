@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>VexFlow MusicXML Viewer</title>
+    <meta name="viewport" content="initial-scale = 1.0, minimum-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
+
+    <!-- Compiled Sources (may need to be copied to same directory) -->
+    <script src="jquery.js"></script>
+    <script src="vexflow-free.js"></script>
+    <script src="vexflow-musicxml-free.js"></script>
+    <script src="musicxml-viewer.js"></script>
+
+    <script>
+      // source: http://stackoverflow.com/a/901144
+      function getParameter(name) {
+        name = name.replace(/\[]/, "\\\[").replace(/[\]]/, "\\\]");
+        var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+        var results = regex.exec(window.location.search);
+        if (results == null) return undefined;
+        else return decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+
+      var VexFlow_Viewer = null;
+      $(document).ready(function() {
+        var req = new XMLHttpRequest();
+        uri = 'http://localhost:3000/xmlfragments/1/conductor/0';
+        req.open('GET', uri, true);
+        req.onreadystatechange = function() {
+          if (req.readyState != 4) return;
+          var doc = new Vex.Flow.MusicXML.Document(req.responseText);
+          VexFlow_Viewer = new Vex.Flow.MusicXML.Viewer($('.vexml_viewer')[0], doc);
+        };
+        req.send(null);
+      });
+    </script>
+    <style>
+      .vexml_viewer {
+        width: 100%;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="vexml_viewer">
+      <p>Please enable JavaScript to use the viewer.</p>
+    </div>
+  </body>
+</html>

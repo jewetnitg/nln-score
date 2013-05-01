@@ -1,0 +1,8 @@
+{
+	"name": "score",
+	"description": "Application for interactive music",
+	"dependencies": {
+		"express": ">= 2.3.12",
+		"socket.io": ">= 0.0.1"
+	}
+}
