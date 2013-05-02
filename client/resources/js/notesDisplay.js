@@ -1,10 +1,8 @@
 socket.on('play-next-fragment', function (data) {
 	console.log("caught play-next-fragment",data);
 	var newFragmentPath = getFragmentPath(data.piece,data.fragments[1]);
-	$('.fragment').toggleClass("current-fragment");
-	setTimeout(function(){		
-		changeScore($('.fragment:not(.current-fragment)'),newFragmentPath);
-	},1000);
+	$('.fragment').toggleClass("current-fragment");	
+	changeScore($('.fragment:not(.current-fragment)'),newFragmentPath);
 
 });
 

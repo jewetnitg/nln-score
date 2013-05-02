@@ -20,7 +20,7 @@ body{
 .current-fragment{
 	-webkit-box-shadow: inset 0px 0px 0px 6px #b00;
 	-moz-box-shadow: inset 0px 0px 0px 6px #b00;
-    -o-box-shadow: inset 0px 0px 0px 6px #b00;
+    	-o-box-shadow: inset 0px 0px 0px 6px #b00;
 	box-shadow: inset 0px 0px 2px 4px #b00; 
 }
 .conductor{
@@ -28,4 +28,5 @@ body{
 }
 .conductor .fragment{
   	height: 100%;
+	cursor: pointer;
 }
