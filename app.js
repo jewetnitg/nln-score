@@ -1,13 +1,15 @@
 var app = require('express')()
   , server = require('http').createServer(app)
-  , io = require('socket.io').listen(server);
+  , io = require('socket.io').listen(server);  
   
 var gameplayState = 1;
 var fragments = [1,2];
 var piece = 1;
 var groups = require(__dirname+"/pieces/"+piece+"/"+"groups.json");
 var instruments = require(__dirname+"/pieces/"+piece+"/"+"instruments.json");
+
 server.listen(3000);
+
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
@@ -20,6 +22,10 @@ app.get('/pages/:page', function (req, res) {
 app.get('/resources/*',function(req,res){
 	console.log("about to server resource: " + __dirname + '/client/resources/'+req.params);
 	res.sendfile(__dirname + '/client/resources/'+req.params);
+});
+
+app.get('/currentFragments', function (req, res) {
+	res.json(fragments);
 });
 
 app.get('/instruments', function (req, res) {

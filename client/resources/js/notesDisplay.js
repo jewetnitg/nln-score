@@ -4,20 +4,16 @@ socket.on('play-next-fragment', function (data) {
 	$('.fragment').toggleClass("current-fragment");
 	setTimeout(function(){		
 		changeScore($('.fragment:not(.current-fragment)'),newFragmentPath);
-	},2000);
+	},1000);
 
 });
 
 function changeScore(element,scoreXmlPath){
-        var req = new XMLHttpRequest();
-        uri = scoreXmlPath;
-        req.open('GET', uri, true);
-        req.send(null);
-        return req.onreadystatechange = function() {
-          if (req.readyState != 4) return;
-          var doc = new Vex.Flow.MusicXML.Document(req.responseText);
-          return VexFlow_Viewer = new Vex.Flow.MusicXML.Viewer($(element)[0], doc);
-        };
+        $.get(scoreXmlPath, function(data) {
+        	console.log(data);
+			var doc = new Vex.Flow.MusicXML.Document(data);
+          	return VexFlow_Viewer = new Vex.Flow.MusicXML.Viewer($(element)[0], doc);
+		});
 }
 
 function getFragmentPath(piece,fragment){
@@ -27,3 +23,10 @@ function getFragmentPath(piece,fragment){
 	}
 	return "/xmlfragments/"+piece+"/"+instrument+"/"+fragment;
 }
+
+$(document).ready(function(){
+		$.get("/currentFragments", function(data) {
+			changeScore($('.fragment:not(.current-fragment)'),getFragmentPath(1,data[0]));
+			changeScore($('.fragment.current-fragment'),getFragmentPath(1,data[1]));
+		});
+});
