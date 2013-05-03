@@ -12,10 +12,10 @@ body{
   	overflow:hidden;
 	padding: 0;
 	margin: 0;
-  	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+  	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .current-fragment{
 	-webkit-box-shadow: inset 0px 0px 0px 6px #b00;
