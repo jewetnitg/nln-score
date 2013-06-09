@@ -7,7 +7,7 @@ $(document).ready(function(){
         .insertAfter($(this));
     })
     .bind("slider:changed", onSliderChange);  
-    onSliderChange({currentTarget:$(".gamevar-slider")},{value:1});
+    onSliderChange({currentTarget:$(".gamevar-slider")},{value:0});
 });
 
 function onSliderChange(event, data) {

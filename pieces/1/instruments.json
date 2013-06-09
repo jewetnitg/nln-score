@@ -1,8 +1,9 @@
 {
-    "cb" : "cb",
-    "clarinet" : "clarinet",
-    "flute" : "flute",
-    "oboe" : "oboe",
-    "piano" : "piano",
-    "trumpet" : "trumpet"
+    "cb": "cb",
+    "clarinet": "clarinet",
+    "flute": "flute",
+    "oboe": "oboe",
+    "piano": "piano",
+    "trumpet": "trumpet"
 }
+
