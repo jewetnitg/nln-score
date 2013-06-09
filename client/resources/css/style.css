@@ -16,6 +16,10 @@ body{
 	-moz-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
+
+    background-size: 100%;
+    background-repeat:no-repeat;
+    background-position:center center;
 }
 .current-fragment{
 	-webkit-box-shadow: inset 0px 0px 0px 6px #b00;
@@ -29,4 +33,5 @@ body{
 .conductor .fragment{
   	height: 100%;
 	cursor: pointer;
+    background-size: auto 100%;
 }

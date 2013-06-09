@@ -32,8 +32,8 @@ app.get('/instruments', function (req, res) {
 	res.json(instruments);
 });
 
-app.get('/fragments/:piece/:instrument/:fragment', function (req, res) {
-	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".jpg");
+app.get('/imgfragments/:piece/:instrument/:fragment', function (req, res) {
+	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".png");
 });
 app.get('/xmlfragments/:piece/:instrument/:fragment', function (req, res) {
 	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".xml");
