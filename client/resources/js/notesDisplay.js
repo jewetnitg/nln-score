@@ -1,16 +1,21 @@
-var scoreType = "img";
-
 socket.on('play-next-fragment', function (data) {
 	console.log("caught play-next-fragment",data);
-	var newFragmentPath = getFragmentPath(data.piece,data.fragments[1],scoreType);
+	var newFragmentPath = getFragmentPath(data.piece,data.fragments[1],data.scoreType);
 	$('.fragment').toggleClass("current-fragment");	
-	changeScore($('.fragment:not(.current-fragment)'),newFragmentPath,scoreType);
+	changeScore($('.fragment:not(.current-fragment)'),newFragmentPath,data.scoreType);
 });
 
 $(document).ready(function(){
     $.get("/currentFragments", function(data) {
-        changeScore($('.fragment:not(.current-fragment)'),getFragmentPath(1,data[0]),scoreType);
-        changeScore($('.fragment.current-fragment'),getFragmentPath(1,data[1]),scoreType);
+        console.log(data);
+        changeScore(
+            $('.fragment:not(.current-fragment)'),
+            getFragmentPath(1,data.fragments[0],data.scoreType)
+            ,data.scoreType);
+        changeScore(
+            $('.fragment.current-fragment')
+            ,getFragmentPath(1,data.fragments[1],data.scoreType)
+            ,data.scoreType);
     });
 });
 
@@ -32,13 +37,16 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-    var nextFragment = $(element).css('background-image', 'url(' + newFragmentPath + ')');
+    $(element).css('background-image', 'url(' + newFragmentPath + ')');
 }
 
-function getFragmentPath(piece,fragment,type){
+function getFragmentPath(piece,fragment,scoreType){
+    console.log(scoreType);
 	var instrument = "conductor";
 	if($("#instrument-select").size() > 0){
 		instrument = $("#instrument-select").val();
 	}
-	return "/"+type+"fragments/"+piece+"/"+instrument+"/"+fragment;
+    var path = "/"+scoreType+"fragments/"+piece+"/"+instrument+"/"+fragment;
+    console.log(path);
+	return path;
 }

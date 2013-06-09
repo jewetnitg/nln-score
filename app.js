@@ -1,13 +1,13 @@
 var app = require('express')()
-  , server = require('http').createServer(app)   ;
+  ,server = require('http').createServer(app)
+  ,config=require('./config.json');
 
 
-
-var piece = 1;
-var instruments = require(__dirname+"/pieces/"+piece+"/"+"instruments.json")
-    ,realtimeApi = require("./realtimeApi").createSocket(piece,server);
+var instruments = require(__dirname+"/pieces/"+config.piece+"/"+"instruments.json")
+    ,realtimeApi = require("./realtimeApi");
 console.log(instruments);
 
+realtimeApi.createSocket(server);
 server.listen(3000);
 
 
@@ -25,7 +25,8 @@ app.get('/resources/*',function(req,res){
 });
 
 app.get('/currentFragments', function (req, res) {
-	res.json(fragments);
+    console.log(config);
+	res.json({fragments:realtimeApi.fragments,scoreType:config.scoreType});
 });
 
 app.get('/instruments', function (req, res) {
