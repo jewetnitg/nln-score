@@ -1,6 +1,6 @@
-function halfVizToJSON(graph){
-    var JSONGraph = "{\"lines\":[";
-    graph.split("\n");
+exports.halfVizToJSON = function(graph){
+    var JSONGraph = {};
+    graph = graph.split("\n");
     var lines = [];
     for(l in graph){
         if(graph[l].length > 0 && graph[l][0] != ";"){
@@ -9,13 +9,12 @@ function halfVizToJSON(graph){
     }
 
     for(l in lines){
-        if(l!=0){
-            JSONGraph += ",";
-        }
         var line = lines[l];
-        line.split("->");
-        JSONGraph += "["+line[0]+","+line[2]+"]";
+        line = line.split("->");
+        if(!JSONGraph[line[0]]){
+            JSONGraph[line[0]] = [];
+        }
+        JSONGraph[line[0]].push(line[1]);
     }
-    JSONGraph += "]}";
     return JSONGraph;
 }
