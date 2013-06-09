@@ -1,12 +1,12 @@
 var app = require('express')()
-  , server = require('http').createServer(app)
-  , io = require('socket.io').listen(server);  
-  
-var gameplayState = 1;
-var fragments = [1,2];
+  , server = require('http').createServer(app)   ;
+
+
+
 var piece = 1;
-var groups = require(__dirname+"/pieces/"+piece+"/"+"groups.json");
-var instruments = require(__dirname+"/pieces/"+piece+"/"+"instruments.json");
+var instruments = require(__dirname+"/pieces/"+piece+"/"+"instruments.json")
+    ,realtimeApi = require("./realtimeApi").createSocket(piece,server);
+console.log(instruments);
 
 server.listen(3000);
 
@@ -38,40 +38,6 @@ app.get('/imgfragments/:piece/:instrument/:fragment', function (req, res) {
 app.get('/xmlfragments/:piece/:instrument/:fragment', function (req, res) {
 	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".xml");
 });
-
-io.sockets.on('connection', function (socket) {
-	socket.emit('connected', { hello: 'world' });
-	socket.emit('play-next-fragment', {piece:piece, fragments: fragments});
-	
-	socket.on('my other event', function (data) {
-    	console.log(data);
-	});
-  
-	socket.on('set-gameplay-state', function (data) {
-		console.log("set-gameplay-state caught",data);
-		gameplayState = data.gameplayState;
-	});
-
-	socket.on('next-fragment-conducted', function (data) {
-		console.log("caught next-fragment-conducted");
-		fragments.splice(0, 1);
-		fragments[1] = getNextFragment();
-		
-		console.log("about to emit play-next-fragment", {piece:piece, fragments: fragments});
-		socket.broadcast.emit('play-next-fragment', {piece:piece, fragments: fragments});
-		socket.emit('play-next-fragment', {piece:piece, fragments: fragments});
-	});
-	  
-});
-
-function getNextFragment(){
-	var randomIndex = Math.floor(Math.random()*groups[gameplayState].length);
-	console.log("groups",groups);
-	console.log("groups["+gameplayState+"]",groups[gameplayState]);
-	console.log("randomIndex: " + randomIndex);
-	console.log("about to return  nextFragment: " + groups[gameplayState][randomIndex], groups);
-	return groups[gameplayState][randomIndex];
-}
 
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/instrumentalist.html');

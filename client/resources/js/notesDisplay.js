@@ -32,9 +32,7 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-    var nextFragment = $('.current-fragment').css('background-image', 'url(' + newFragmentPath + ')');
-    $(".next-fragment")
-        .attr("src",nextFragment);
+    var nextFragment = $(element).css('background-image', 'url(' + newFragmentPath + ')');
 }
 
 function getFragmentPath(piece,fragment,type){

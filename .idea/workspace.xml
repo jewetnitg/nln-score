@@ -2,72 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/7.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/cb/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/clarinet/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/conductor/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/flute/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/oboe/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/piano/8.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/trumpet/8.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HalfVizToJSON.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pieces/1/groupsGraph.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/realtimeApi.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/conductor.html" afterPath="$PROJECT_DIR$/pages/conductor.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/resources/js/instrumentalist.js" afterPath="$PROJECT_DIR$/client/resources/js/instrumentalist.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/resources/js/notesDisplay.js" afterPath="$PROJECT_DIR$/client/resources/js/notesDisplay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/resources/css/style.css" afterPath="$PROJECT_DIR$/client/resources/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="nln-score.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370777367514" ignored="false" />
-    <file path="/notesDisplay.js" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370779536570" ignored="false" />
+    <file path="/Dummy.txt" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370780636409" ignored="false" />
+    <file path="/notesDisplay.js" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370780123380" ignored="false" />
+    <file path="/HalfVizToJSON.js" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370780720702" ignored="false" />
+    <file path="/app.js" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370782714190" ignored="false" />
+    <file path="/realtimeApi.js" changelist="1ed25d12-d93b-4b26-9bd9-de1e89a2b508" time="1370782674150" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,26 +35,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="notesDisplay.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="notesDisplay.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/client/resources/js/notesDisplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+            <state line="36" column="103" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.5346062">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="groups.json" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pieces/1/groups.json">
+      <file leaf-file-name="groupsGraph.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pieces/1/groupsGraph.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="115" selection-start="76" selection-end="76" vertical-scroll-proportion="0.2278481">
+            <state line="8" column="4" selection-start="60" selection-end="60" vertical-scroll-proportion="-5.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="107" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="instruments.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pieces/1/instruments.json">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
@@ -114,10 +71,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="conductor.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pages/conductor.html">
+      <file leaf-file-name="realtimeApi.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/realtimeApi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-13.125">
+            <state line="13" column="30" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HalfVizToJSON.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HalfVizToJSON.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="groups.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pieces/1/groups.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="1" selection-start="76" selection-end="76" vertical-scroll-proportion="-3.75">
               <folding />
             </state>
           </provider>
@@ -141,42 +125,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="instrumentalist.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/resources/js/instrumentalist.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="interpreter.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/resources/js/interpreter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="1" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/resources/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="10" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="26" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -195,10 +143,13 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/pages/conductor.html" />
         <option value="$PROJECT_DIR$/client/resources/css/style.css" />
         <option value="$PROJECT_DIR$/client/resources/js/instrumentalist.js" />
+        <option value="$PROJECT_DIR$/pieces/1/groupsGraph.json" />
+        <option value="$PROJECT_DIR$/HalfVizToJSON.js" />
+        <option value="$PROJECT_DIR$/realtimeApi.js" />
+        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/client/resources/js/notesDisplay.js" />
       </list>
     </option>
@@ -208,6 +159,31 @@
     <option name="y" value="65" />
     <option name="width" value="1268" />
     <option name="height" value="821" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Code style issuesJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>CoffeeScript</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -282,7 +258,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -296,33 +272,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nln-score" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="nln-score" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="express" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -336,15 +290,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="client" />
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
+              <option name="myItemId" value="express" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -356,7 +310,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="recentsLimit" value="5" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="editor.preferences.appearance" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app.js" />
     <property name="options.searchVisible" value="true" />
@@ -384,7 +338,9 @@
       <method />
     </configuration>
     <configuration default="false" name="app.js" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="/usr/local/bin/node" path-to-js-file="app.js" working-dir="$PROJECT_DIR$">
+      <RunnerSettings RunnerId="NodeJS.debug" />
       <RunnerSettings RunnerId="NodeJS.run" />
+      <ConfigurationWrapper RunnerId="NodeJS.debug" />
       <ConfigurationWrapper RunnerId="NodeJS.run" />
       <method />
     </configuration>
@@ -422,11 +378,11 @@
     <frame x="75" y="65" width="1268" height="821" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952926" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.28559738" sideWeight="0.6704708" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39942938" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24959083" sideWeight="0.6704708" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -503,55 +459,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pieces/1/instruments.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/1/metadata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="26" selection-start="901" selection-end="901" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/resources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="10" selection-start="78" selection-end="78" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/conductor.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="1018" selection-end="1018" vertical-scroll-proportion="-13.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/resources/js/interpreter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="1" selection-start="612" selection-end="612" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/resources/js/instrumentalist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="0" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
@@ -573,16 +480,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/resources/js/notesDisplay.js">
+    <entry file="file://$PROJECT_DIR$/pieces/1/groups.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="20" selection-start="20" selection-end="20" vertical-scroll-proportion="0.0">
+        <state line="6" column="1" selection-start="76" selection-end="76" vertical-scroll-proportion="-3.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pieces/1/groups.json">
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/lib/socket.io.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="115" selection-start="76" selection-end="76" vertical-scroll-proportion="0.2278481">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/socket.io/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/express.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/node_modules/connect/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/1/groupsGraph.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="4" selection-start="60" selection-end="60" vertical-scroll-proportion="-5.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HalfVizToJSON.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="30" selection-start="30" selection-end="30" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pieces/1/instruments.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/realtimeApi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="30" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="107" selection-start="296" selection-end="296" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/resources/js/notesDisplay.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="103" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.5346062">
           <folding />
         </state>
       </provider>
