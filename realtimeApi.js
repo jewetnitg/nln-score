@@ -8,6 +8,7 @@ exports.createSocket = function (server) {
         {fragment: 1, group: 0},
         {fragment: 2, group: 0}
     ];
+	
     exports.fragments = fragments;
     var graphPath = __dirname + "/pieces/" + config.piece + "/" + "groupsGraph.viz";
 
@@ -42,10 +43,14 @@ exports.createSocket = function (server) {
 
             socket.on('next-fragment-conducted', function (data) {
                 console.log("caught next-fragment-conducted");
-                fragments.splice(0, 1);
                 console.log("fragments", fragments);
-
-                fragments[1] = getNextFragment(fragments[0]);
+				
+				var newFragment = getNextFragment(fragments[1]);
+				
+				if(newFragment != null){
+	                fragments.splice(0, 1);
+	                fragments[1] = getNextFragment(fragments[0]);
+				}
 
                 console.log("about to emit play-next-fragment", {piece: config.piece, fragments: fragmentsToArray(), scoreType: config.scoreType});
                 socket.broadcast.emit('play-next-fragment', {piece: config.piece, fragments: fragmentsToArray(), scoreType: config.scoreType});
@@ -56,13 +61,14 @@ exports.createSocket = function (server) {
 
 
         function getNextFragment(currentFragment) {
-            var group = currentFragment.group;
-            var fragment = currentFragment.fragment;
+            var currentGroupId = currentFragment.group;
+            var currentFragmentId = currentFragment.fragment;
             var fragmentsInWishedGroup = [];
-            var destinations = groups[group][fragment];
+            var destinations = groups[currentGroupId][currentFragmentId];
+			var wishedGroup = gameplayState;
 
             for (i in destinations) {
-                if (groups[gameplayState][destinations[i]]) {
+                if (groups[wishedGroup][destinations[i]]) {
                     fragmentsInWishedGroup.push(destinations[i]);
                 }
             }
@@ -71,7 +77,12 @@ exports.createSocket = function (server) {
                 Math.random() * fragmentsInWishedGroup.length
             );
 
-            return {fragment:fragmentsInWishedGroup[randomIndex],group:gameplayState};
+			var nextFragment = {fragment:fragmentsInWishedGroup[randomIndex],group:wishedGroup};
+			if(nextFragment.fragment == null){
+				nextFragment = null;
+			}
+			console.log("next fragment json object is:",nextFragment);
+            return nextFragment;
         }
 
         function fragmentsToArray() {
