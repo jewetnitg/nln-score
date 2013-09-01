@@ -2,15 +2,31 @@ var app = require('express')()
   ,server = require('http').createServer(app)
   ,config=require('./config.json');
 
-
+ /******************************************************************\
+  *
+  *		READ DIRECTORY STRUCTURE TO FIND AVAILABLE INSTRUMENTS
+  *
+  ******************************************************************/
 var instruments = require(__dirname+"/pieces/"+config.piece+"/"+"instruments.json")
     ,realtimeApi = require("./realtimeApi");
 console.log(instruments);
 
+
+/******************************************************************\
+ *
+ *		START SERVICES
+ *
+ ******************************************************************/
 realtimeApi.createSocket(server);
 server.listen(3000);
 
 
+
+/******************************************************************\
+ *
+ *		AVAILABLE API CALLS
+ *
+ ******************************************************************/
 app.get('/', function (req, res) {
   res.sendfile(__dirname + '/index.html');
 });
@@ -36,6 +52,7 @@ app.get('/instruments', function (req, res) {
 app.get('/imgfragments/:piece/:instrument/:fragment', function (req, res) {
 	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".png");
 });
+
 app.get('/xmlfragments/:piece/:instrument/:fragment', function (req, res) {
 	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".xml");
 });
