@@ -6,18 +6,22 @@ socket.on('play-next-fragment', function (data) {
 });
 
 $(document).ready(function(){
+	initializeNotesDisplay();
+});
+
+function initializeNotesDisplay(){
     $.get("/currentFragments", function(data) {
         console.log(data);
         changeScore(
             $('.fragment:not(.current-fragment)'),
-            getFragmentPath(1,data.fragments[0],data.scoreType)
+            getFragmentPath(1,data.fragments[1],data.scoreType)
             ,data.scoreType);
         changeScore(
             $('.fragment.current-fragment')
-            ,getFragmentPath(1,data.fragments[1],data.scoreType)
+            ,getFragmentPath(1,data.fragments[0],data.scoreType)
             ,data.scoreType);
     });
-});
+}
 
 
 function changeScore(element,scorePath,type){

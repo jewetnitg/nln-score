@@ -32,13 +32,6 @@ exports.createSocket = function (server) {
 		
         io.sockets.on('connection', function (socket) {
             socket.emit('connected', { hello: 'world' });
-            socket.emit('play-next-fragment',
-                {
-                    piece: config.piece,
-                    fragments: fragments,
-                    scoreType: config.scoreType
-                }
-            );
 
             socket.on('set-gameplay-state', function (data) {
                 gameplayState = data.gameplayState;

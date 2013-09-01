@@ -20,14 +20,7 @@ $(document).ready(function () {
         });
 
     });
-
-    $(document).ready(function () {
-        $('.fragment').click(function () {
-            if ($("#instrument-select").val().indexOf("conductor") >= 0) {
-                console.log("about to emitnext-fragment-conducted");
-                socket.emit('next-fragment-conducted', {});
-            }
-        });
-    });
+	
+	$("#instrument-select").change(initializeNotesDisplay);
 });
 
