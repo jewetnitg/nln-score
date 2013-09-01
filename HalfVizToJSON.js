@@ -32,3 +32,38 @@ exports.halfVizToJSON = function (graph) {
 
     return JSONGraph;
 }
+
+exports.halfVizToGraff = function (graph) {
+	var GROUP_DISTANCE_CONST = 20;//calibrate this
+    var JSONGraph = [
+        {}
+    ];
+    graph = graph.split("\n");
+    var lines = [];
+    for (l in graph) {
+        if (graph[l][0] != ";") {
+            lines.push(graph[l]);
+        }
+    }
+
+	var currentGroup = 0;
+	var edgeIndex = 0;
+    for (l in lines) {
+        var line = lines[l];
+        if (line.length == 0) {
+            currentGroup++;
+			console.log("currentGroup is: " + currentGroup);
+        }else{
+            line = line.split("->");
+			var groupDistance =  Math.abs(line[0][0] - line[1][0]) * GROUP_DISTANCE_CONST;//maybe exponential is better?
+			line[line.length] = groupDistance + 100;
+			console.log("line "+l+" is:", line);
+            JSONGraph[edgeIndex] = line;
+			edgeIndex++;
+        }
+    }
+
+    console.log("graff is",JSONGraph);
+
+    return JSONGraph;
+}

@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"description": "Application for non linear interactive music",
 	"dependencies": {
+		"underscore" : ">= 1.5.1",
 		"express": ">= 2.3.12",
-		"socket.io": ">= 0.0.1"
+		"socket.io": ">= 0.0.1",
+		"graff": ">= 0.0.3"
 	}
 }
