@@ -1,8 +1,10 @@
-<script src="/socket.io/socket.io.js"></script>
-<script>
-  var socket = io.connect('http://localhost:3000');
-  socket.on('news', function (data) {
-    console.log(data);
-    socket.emit('my other event', { my: 'data' });
-  });
-</script>
+<html>
+<head>
+	<title>nln-score</title>
+</head>
+<body>
+	<a href="pages/conductor">conductor</a>
+	<a href="pages/instrumentalist">conductor</a>
+	<a href="pages/interpreter">conductor</a>
+</body>
+</html>
