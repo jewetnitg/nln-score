@@ -25,11 +25,15 @@ function initializeNotesDisplay(){
 
 
 function changeScore(element,scorePath,type){
-    if(type === "xml"){
-        return changeScoreXml(element,scorePath);
-    }else if(type === "img"){
-        return changeScoreImg(element,scorePath);
-    }
+	if(element.data("score-path") != scorePath){
+		element.data("score-path",scorePath);
+	
+   		if(type === "xml"){
+        	return changeScoreXml(element,scorePath);
+    	}else if(type === "img"){
+        	return changeScoreImg(element,scorePath);
+    	}
+	}
 }
 
 function changeScoreXml(element,scoreXmlPath){
@@ -41,7 +45,7 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-    $(element).css('background-image', 'url(' + newFragmentPath + ')');
+	    $(element).css('background-image', 'url(' + newFragmentPath + ')');
 }
 
 function getFragmentPath(piece,fragment,scoreType){
