@@ -22,10 +22,10 @@ body{
     background-position:center center;
 }
 .current-fragment{
-	-webkit-box-shadow: inset 0px 0px 0px 6px #b00;
-	-moz-box-shadow: inset 0px 0px 0px 6px #b00;
-    	-o-box-shadow: inset 0px 0px 0px 6px #b00;
-	box-shadow: inset 0px 0px 2px 4px #b00; 
+	-webkit-box-shadow: inset 0px 0px 0px 6px #4B4;
+	-moz-box-shadow: inset 0px 0px 0px 6px #4B4;
+    	-o-box-shadow: inset 0px 0px 0px 6px #4B4;
+	box-shadow: inset 0px 0px 2px 4px #4B4; 
 }
 .conductor{
 	height:100%;
