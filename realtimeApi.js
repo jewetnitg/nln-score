@@ -8,8 +8,8 @@ exports.createSocket = function (server) {
 		conductingUtil = require('./conductingUtil');
     var gameplayState = 0;
     var fragments = [
-        "0.1",
-        "0.2"
+        "0.0",
+        "1.2"
     ];
 	
     exports.fragments = fragments;

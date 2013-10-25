@@ -52,6 +52,8 @@ exports.halfVizToGraff = function (graph) {
         var line = lines[l];
         if (line.length == 0) {
             currentGroup++;
+
+// dit doet nu niks meer? de 'currentgroup' gebaseerd op line break is verwarrend
 			console.log("currentGroup is: " + currentGroup);
         }else{
             line = line.split("->");
