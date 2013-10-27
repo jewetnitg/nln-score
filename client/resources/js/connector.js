@@ -1,4 +1,4 @@
-var socket = io.connect('http://192.168.0.100:3000');//configure this to point to the nodejs server
+var socket = io.connect('http://192.168.0.101:3000');//configure this to point to the nodejs server
 
 socket.on('connected', function (data) {
 	console.log("connected",data);
