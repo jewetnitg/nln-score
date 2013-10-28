@@ -1,15 +1,17 @@
 $(document).ready(function () {
+	$("#instrument-select").change(initializeNotesDisplay);
 
     console.log("about to get instruments");
     $.get("/instruments", function (data) {
         console.log("received instruments", data);
 
         var select = $('#instrument-select');
-
+		
+		var options = "";
         if (select.prop) {
-            var options = select.prop('options');
+           options  = select.prop('options');
         } else {
-            var options = select.attr('options');
+           options = select.attr('options');
         }
 
         $('option', select).remove();
@@ -18,9 +20,7 @@ $(document).ready(function () {
             console.log("adding option", new Option(text, val));
             options[options.length] = new Option(text, val);
         });
-
+		$("#instrument-select").val($.url().param('instrument'));
     });
-	
-	$("#instrument-select").change(initializeNotesDisplay);
 });
 

@@ -11,33 +11,24 @@
   <script src="/socket.io/socket.io.js"></script>
   <script src="/resources/js/connector.js"></script>
   <script src="/resources/js/interpreter.js"></script></head>
-
-<script>
-// the range moet nog een variabele worden aan de hand van het aantal in de array van het stuk te vinden is nu even gesteld op 8…
-	var groups = 8;
-
-function createButtons()
-{
-	for (var i=0;i<groups;i++)
-	{
-	var button=document.createElement("BUTTON");
-	button.setAttribute("onclick","alert('gameplayState: " + i + "')");
-// dit moet nog als variabele worden doorgegeven aan het systeem, eventueel gewoon via de simple-slider (zie je ook meteen welke groep je zit)...
-	var t=document.createTextNode("level " + i);
-	button.appendChild(t);
-	document.body.appendChild(button);
-	}
-};
-</script>
   
-<body onload="createButtons()">
+<body>
+<div class="login-container">
+	<form class="login-form">
+	Password:
+	<input type="password" class="password-input"/>
+	<input type="submit" value="continue"/>
+	</form>
+</div>
+<div class="content-container">
+	<div class="description">
+		THE SLIDER OR INTERPRETER OF 'THE VARIABLE' OF A PIECE
+		// the range moet nog een variabele worden aan de hand van het aantal in de array van het stuk te vinden is
+	</div>
 
-THE SLIDER OR INTERPRETER OF 'THE VARIABLE' OF A PIECE
-// the range moet nog een variabele worden aan de hand van het aantal in de array van het stuk te vinden is
-  <input class="gamevar-slider" type="text" data-slider="true" data-slider-range="0,7" data-slider-step="1"/>
- <div> </div> 
-
-<button onClick="createButtons()" style="font: bold 14px Arial">TEST</button>
-
+	<div class="input">
+		<input class="gamevar-slider" type="text" data-slider="true" data-slider-range="0,7" data-slider-step="1"/>
+	</div>
+</div>
 </body>
 </html>	
