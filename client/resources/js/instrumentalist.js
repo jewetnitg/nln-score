@@ -21,6 +21,10 @@ $(document).ready(function () {
             options[options.length] = new Option(text, val);
         });
 		$("#instrument-select").val($.url().param('instrument'));
+// oplossing voor instrumentplaatjes inladen zit hem in iets als onderstaande. Deze toevoeging lost het al wel op, maar mijn syntax is misschien nog niet goed:
+		if ($.url().param('instrument')) 
+		{
+			initializeNotesDisplay();
+		}
     });
 });
-
