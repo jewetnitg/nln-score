@@ -9,16 +9,17 @@ $(document).ready(function(){
 	initializeNotesDisplay();
 });
 
+// hardcoded '2' in function initializeNotesDisplay for piece... data.piece didn't work here, but hey it's only init
 function initializeNotesDisplay(){
     $.get("/currentFragments", function(data) {
         console.log(data);
         changeScore(
             $('.fragment:not(.current-fragment)'),
-            getFragmentPath(1,data.fragments[1],data.scoreType)
+            getFragmentPath(2,data.fragments[1],data.scoreType)
             ,data.scoreType);
         changeScore(
             $('.fragment.current-fragment')
-            ,getFragmentPath(1,data.fragments[0],data.scoreType)
+            ,getFragmentPath(2,data.fragments[0],data.scoreType)
             ,data.scoreType);
     });
 }
