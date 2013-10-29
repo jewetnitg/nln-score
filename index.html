@@ -2,6 +2,8 @@
 <head>
 	<title>nln-score</title>
 	<script src="/resources/vendor/jquery-1.7.1.min.js"></script>
+		<link href="/resources/css/style.css" type="text/css" rel="stylesheet" />
+
 	<style>
 	.menuItem{
 		display:inline-block;
@@ -12,10 +14,15 @@
 		display:block;
 	}
 	</style>
+<link rel="icon" 
+      type="image/ico" 
+      href="favicon.ico">	
 </head>
 <body>
 	<a href="pages/conductor" class="menuItem">conductor</a>
-	<div class="instruments menuItem">Instrument:</div>
+	<div class="instruments menuItem">
+		<div class="instrument-title">Instrument:</div>
+	</div>
 	<a href="pages/interpreter" class="menuItem">interpreter</a>
 	<script>
     $.get("/instruments", function (data) {
