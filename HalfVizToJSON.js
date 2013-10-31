@@ -14,7 +14,7 @@ exports.halfVizToJSON = function (graph) {
 //    console.log("lines",lines);
 
     for (l in lines) {
-        var line = lines[l];
+        var line = lines[l].replace(/ /g, '');
 
 //        console.log(line.length);
         if (line.length == 0) {
@@ -42,14 +42,14 @@ exports.halfVizToGraff = function (graph) {
     var lines = [];
     for (l in graph) {
         if (graph[l][0] != ";") {
-            lines.push(graph[l]);
+            lines.push(graph[l].replace(/ /g, ''));
         }
     }
 
 	var currentGroup = 0;
 	var edgeIndex = 0;
     for (l in lines) {
-        var line = lines[l];
+        var line = lines[l].replace(/ /g, '');;
         if (line.length == 0) {
             currentGroup++;
 
