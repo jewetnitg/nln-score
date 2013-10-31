@@ -29,7 +29,7 @@ function createButtons()
 {
 	for (var i=0;i<groups;i++)
 	{
-		var button = $("<input/>").attr("type","submit").val("button"+i).data("value",i);
+		var button = $("<input/>").attr("type","submit").val("Level "+i).data("value",i);
 		button.click(function(e){
 			$(".gamevar-slider").simpleSlider("setValue", $(e.currentTarget).data("value"))
 		});
