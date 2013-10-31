@@ -3,16 +3,8 @@ var groups = 8;
 $(document).ready(function(){
   $(".content-container").hide();
   $(".login-form").submit(onLoginSubmit);
+  $(".gamevar-slider").change(onSliderChange);
   createButtons();
-  $("[data-slider]")
-    .each(function () {
-      var input = $(this);
-      $("<span>")
-        .addClass("output")
-        .insertAfter($(this));
-    })
-    .bind("slider:changed", onSliderChange);  
-    onSliderChange({currentTarget:$(".gamevar-slider")},{value:0});
 });
 
 function onLoginSubmit(event){
@@ -26,24 +18,21 @@ function onLoginSubmit(event){
 	}
 }
 
-function onSliderChange(event, data) {
+function onSliderChange(event) {
 	console.log(event);
       $(event.currentTarget)
-        .nextAll(".output:first")
-          .html(data.value.toFixed(3));
-		console.log("about to emit setgameplaystate: " + data.value);
-        socket.emit('set-gameplay-state', { gameplayState: data.value });    
+		console.log("about to emit setgameplaystate: " + event.value);
+        socket.emit('set-gameplay-state', { gameplayState: event.value });    
 }
 
 function createButtons()
 {
 	for (var i=0;i<groups;i++)
 	{
-	var button=document.createElement("BUTTON");
-	button.setAttribute("onclick","alert('gameplayState: " + i + "')");
-// dit moet nog als variabele worden doorgegeven aan het systeem, eventueel gewoon via de simple-slider (zie je ook meteen welke groep je zit)...
-	var t=document.createTextNode("level " + i);
-	button.appendChild(t);
-	$(".content-container").append(button);
+		var button = $("<input/>").attr("type","submit").val("button"+i).data("value",i);
+		button.click(function(e){
+			$(".gamevar-slider").simpleSlider("setValue", $(e.currentTarget).data("value"))
+		});
+		$(".content-container").append(button);
 	}
 };
