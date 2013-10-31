@@ -6,6 +6,7 @@
 		"underscore" : ">= 1.5.1",
 		"express": ">= 2.3.12",
 		"socket.io": ">= 0.0.1",
-		"graff": ">= 0.0.3"
+		"graff": ">= 0.0.3",
+		"walkdir":">=0.0.7"
 	}
 }

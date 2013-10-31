@@ -9,19 +9,20 @@ $(document).ready(function(){
 	initializeNotesDisplay();
 });
 
-// hardcoded '2' in function initializeNotesDisplay for piece... data.piece didn't work here, but hey it's only init
 function initializeNotesDisplay(){
-    $.get("/currentFragments", function(data) {
-        console.log(data);
-        changeScore(
-            $('.fragment:not(.current-fragment)'),
-            getFragmentPath(2,data.fragments[1],data.scoreType)
-            ,data.scoreType);
-        changeScore(
-            $('.fragment.current-fragment')
-            ,getFragmentPath(2,data.fragments[0],data.scoreType)
-            ,data.scoreType);
-    });
+	preloadImages(function(){
+	    $.get("/currentFragments", function(data) {
+	        console.log("currentFragments on initialize",data);
+	        changeScore(
+	            $('.fragment:not(.current-fragment)'),
+	            getFragmentPath(data.piece,data.fragments[1],data.scoreType)
+	            ,data.scoreType);
+	        changeScore(
+	            $('.fragment.current-fragment')
+	            ,getFragmentPath(data.piece,data.fragments[0],data.scoreType)
+	            ,data.scoreType);
+	    });	
+	});
 }
 
 
@@ -46,7 +47,7 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-	    $(element).css('background-image', 'url(' + newFragmentPath + ')');
+	$(element).html(document.images[newFragmentPath].clone());
 }
 
 function getFragmentPath(piece,fragment,scoreType){
@@ -58,4 +59,20 @@ function getFragmentPath(piece,fragment,scoreType){
     var path = "/"+scoreType+"fragments/"+piece+"/"+instrument+"/"+fragment;
     console.log(path);
 	return path;
+}
+
+document.images;
+function preloadImages(done){
+	$.get("/allimages",function(data){
+			console.log("allimages: ",data);
+			var imageLoader = $("<div id='image-Loader'/>");
+			for(i in data){
+				document.images[data[i]] = $("<div/>").css('background-image', 'url(' +  data[i] + ')');
+				imageLoader.append(document.images[data[i]]);
+			}
+			$("body").append(imageLoader)
+			$("#imageLoader").remove();
+			done();
+	});
+
 }
