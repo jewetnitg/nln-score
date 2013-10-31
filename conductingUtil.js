@@ -84,6 +84,11 @@ function getBreathFirst(currentFragment,wishedGroup,jsonGraph,graffObject){
 	}
 }
 
+/* 
+ * Gebruikt dijkstra's algoritme voor het vinden van kortste paden naar fragementen.
+ * checkt voor elk fragment in de gewenste groep wat de kortse weg daarnaartoe is.
+ * return een kortste pad naar een dichtstbijzijnde fragment.
+ */
 function getPathToClosestFragmentFrom(currentFragment,fragmentsInWishedGroup,graffObject){
 	var shortestPath = 0;
 	var path = null;
@@ -91,18 +96,17 @@ function getPathToClosestFragmentFrom(currentFragment,fragmentsInWishedGroup,gra
 	for(var k in fragmentsInWishedGroup){	
 		path = graffObject.get_path(currentFragment,fragmentsInWishedGroup[k],true);
 		if (path){
-			if (path[1]<shortestPath || shortestPath == 0)
-			{
-			var shortestPath = path;
+			if (path[1]<shortestPath || shortestPath == 0){
+				var shortestPath = path;
 			}
-		console.log("path = " + path[0] + " length = " + path[1]);
+			console.log("path = " + path[0] + " length = " + path[1]);
 		}
 	}
 	console.log("shortestpath = " + shortestPath);
 	
 	// shortest path mag niet "0" zijn, dan is er een error, fiks dat
 	if (shortestPath==0){
-		console.log("SOMEHOW IT GOT STUCK, DONT KNOW WHY!!! You might want to check you data structure... I had it once with a 'space' after a value…! " + shortestPath);
+		console.log("SOMEHOW IT GOT STUCK, DONT KNOW WHY!!! You might want to check you data structure... It might be corrupted! are there strange characters or white spaces other than a ' '? " + shortestPath);
 	}
 	return shortestPath;
 }
