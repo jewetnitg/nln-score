@@ -1,8 +1,5 @@
 $(document).ready(function () {
-	
-	$("#instrument-select").change(function(){
-		initializeNotesDisplay($(this).val());
-	});
+	$("#instrument-select").change(initializeNotesDisplay);
 
     console.log("about to get instruments");
     $.get("/instruments", function (data) {
@@ -24,10 +21,10 @@ $(document).ready(function () {
             options[options.length] = new Option(text, val);
         });
 		$("#instrument-select").val($.url().param('instrument'));
-
-		if ($.url().param('instrument')) {
-			initializeNotesDisplay($.url().param('instrument'));
-			$("html, body").animate({ scrollTop: $(document).height() });
+// oplossing voor instrumentplaatjes inladen zit hem in iets als onderstaande. Deze toevoeging lost het al wel op, maar mijn syntax is misschien nog niet goed:
+		if ($.url().param('instrument')) 
+		{
+			initializeNotesDisplay();
 		}
     });
 });

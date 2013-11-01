@@ -6,23 +6,22 @@ socket.on('play-next-fragment', function (data) {
 });
 
 $(document).ready(function(){
-	initializeNotesDisplay($.url().param('instrument'));
+	initializeNotesDisplay();
 });
 
-function initializeNotesDisplay(instrument){
-	preloadImages(instrument,function(){
-	    $.get("/currentFragments", function(data) {
-	        console.log("currentFragments on initialize",data);
-	        changeScore(
-	            $('.fragment:not(.current-fragment)'),
-	            getFragmentPath(data.piece,data.fragments[1],data.scoreType)
-	            ,data.scoreType);
-	        changeScore(
-	            $('.fragment.current-fragment')
-	            ,getFragmentPath(data.piece,data.fragments[0],data.scoreType)
-	            ,data.scoreType);
-	    });	
-	});
+// hardcoded '2' in function initializeNotesDisplay for piece... data.piece didn't work here, but hey it's only init
+function initializeNotesDisplay(){
+    $.get("/currentFragments", function(data) {
+        console.log(data);
+        changeScore(
+            $('.fragment:not(.current-fragment)'),
+            getFragmentPath(2,data.fragments[1],data.scoreType)
+            ,data.scoreType);
+        changeScore(
+            $('.fragment.current-fragment')
+            ,getFragmentPath(2,data.fragments[0],data.scoreType)
+            ,data.scoreType);
+    });
 }
 
 
@@ -47,22 +46,7 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-	console.log("document.images[newFragmentPath]: " +  document.images[newFragmentPath]);
-	console.log('$(".fragment div" ): ' + $(".fragment div" ));
-	console.log('typeof document.images[newFragmentPath]): '+typeof document.images[newFragmentPath]);
-	console.log(typeof document.images[newFragmentPath] != "undefined");
-	console.log((typeof document.images[newFragmentPath]) != "undefined");
-	console.log(typeof document.images[newFragmentPath] != undefined);
-	console.log((typeof document.images[newFragmentPath]) != undefined);
-	console.log((typeof document.images[newFragmentPath]) != "object");
-
-	if(typeof document.images[newFragmentPath] == "object" && 
-		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
-		$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
-		$(element).html(document.images[newFragmentPath].clone());
-	}else{
-		$(element).html(document.images[newFragmentPath]);
-	}
+	    $(element).css('background-image', 'url(' + newFragmentPath + ')');
 }
 
 function getFragmentPath(piece,fragment,scoreType){
@@ -74,20 +58,4 @@ function getFragmentPath(piece,fragment,scoreType){
     var path = "/"+scoreType+"fragments/"+piece+"/"+instrument+"/"+fragment;
     console.log(path);
 	return path;
-}
-
-document.images;
-function preloadImages(instrument,done){
-	$.get("/allimages/"+instrument+"/",function(data){
-			console.log("allimages: ",data);
-			var imageLoader = $("<div id='image-Loader'/>");
-			for(i in data){
-				document.images[data[i]] = $("<div/>").css('background-image', 'url(' +  data[i] + ')');
-				imageLoader.append(document.images[data[i]]);
-			}
-			$("body").append(imageLoader)
-			$("#imageLoader").remove();
-			done();
-	});
-
 }

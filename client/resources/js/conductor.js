@@ -14,9 +14,6 @@ function onLoginSubmit(event){
 	if($(".password-input").val() == "OpenSesami"){
 	    $(".content-container").show();
 		$(".login-container").hide();
-		if("right" == $.url().param('page')){
-			$("html, body").animate({ scrollTop: $(document).height() });
-		}
 	}else{
 		alert("The password is incorrect.");	
 	}
