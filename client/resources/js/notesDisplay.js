@@ -49,7 +49,7 @@ function changeScoreXml(element,scoreXmlPath){
 function changeScoreImg(element,newFragmentPath){
 	console.log("document.images[newFragmentPath]: " +  document.images[newFragmentPath]);
 	console.log('$(".fragment div" ): ' + $(".fragment div" ));
-	if(document.images[newFragmentPath] != undefined && 
+	if(document.images[newFragmentPath] && 
 		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
 		$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
 		$(element).html(document.images[newFragmentPath].clone());
