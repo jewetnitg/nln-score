@@ -49,7 +49,7 @@ function changeScoreXml(element,scoreXmlPath){
 function changeScoreImg(element,newFragmentPath){
 	console.log("document.images[newFragmentPath]: " +  document.images[newFragmentPath]);
 	console.log('$(".fragment div" ): ' + $(".fragment div" ));
-		console.log('typeof document.images[newFragmentPath]): '+typeof document.images[newFragmentPath]);
+	console.log('typeof document.images[newFragmentPath]): '+typeof document.images[newFragmentPath]);
 	console.log('typeof document.images[newFragmentPath]) != undefined: '+typeof document.images[newFragmentPath] != "undefined");
 	if(typeof document.images[newFragmentPath] != "undefined" && 
 		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
