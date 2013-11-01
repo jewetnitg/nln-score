@@ -21,6 +21,17 @@ function createNewPath(currentFragment,wishedGroup,jsonGraph,graffObject){
 	console.log("breadth first path: " + path);
 	if(!path || path == undefined){
 		path = getPathToClosestFragmentFrom(currentFragment,fragmentsInWishedGroup,graffObject);
+
+	// temporary solution as bug fix for Dijkstra not finding a route to 'itself': go to random neighbour
+		if (path==0){
+		// shortest path mag niet "0" zijn, dan is er een error, fiks dat
+		// de bug gevonden: als er maar één waarde in een groep is dan vindt Dijkstra geen nieuwe weg naar die waarde ; )
+		// aangepast in createNewPath
+			var successor = getSuccessor(jsonGraph,currentFragment);
+			path = graffObject.get_path(currentFragment,successor,true);
+		}
+	// END temporary solution as bug fix for Dijkstra not finding a route to 'itself': go to random neighbour
+
 		console.log("dijkstra getPathToClosestFragmentFrom: " + path);
 	}
 
@@ -45,6 +56,25 @@ function checkIfSuccessorsInWishedGroup(jsonGraph,currentFragment,wishedGroup){
     }
 	console.log("successors in wished group = " + successorsInWishedGroup);
 	return successorsInWishedGroup;
+}
+
+
+function getSuccessor(jsonGraph,currentFragment){
+	var successors = [];
+    for (var i in jsonGraph) {
+		if (jsonGraph[i][0]==currentFragment){
+			var nodeGroup = jsonGraph[i][1].split(".")[0];
+				successors.push(jsonGraph[i][1]);	
+		}
+    }
+
+	if(successors){
+		var randomIndex4 = Math.floor(
+        	Math.random() * successors.length
+    	);
+		var successor = successors[randomIndex4];
+	}
+	return successor;
 }
 
 function getFragmentsInWishedGroup(jsonGraph,wishedGroup){
@@ -85,7 +115,7 @@ function getBreathFirst(currentFragment,wishedGroup,jsonGraph,graffObject){
 }
 
 /* 
- * Gebruikt dijkstra's algoritme voor het vinden van kortste paden naar fragementen.
+ * Gebruikt dijkstra's algoritme voor het vinden van kortste paden naar fragmenten.
  * checkt voor elk fragment in de gewenste groep wat de kortse weg daarnaartoe is.
  * return een kortste pad naar een dichtstbijzijnde fragment.
  */
@@ -102,11 +132,6 @@ function getPathToClosestFragmentFrom(currentFragment,fragmentsInWishedGroup,gra
 			console.log("path = " + path[0] + " length = " + path[1]);
 		}
 	}
-	console.log("shortestpath = " + shortestPath);
-	
-	// shortest path mag niet "0" zijn, dan is er een error, fiks dat
-	if (shortestPath==0){
-		console.log("SOMEHOW IT GOT STUCK, DONT KNOW WHY!!! You might want to check you data structure... It might be corrupted! are there strange characters or white spaces other than a ' '? " + shortestPath);
-	}
+//	console.log("shortestpath = " + shortestPath);
 	return shortestPath;
 }

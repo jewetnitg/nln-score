@@ -22,16 +22,29 @@ body{
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 
-    background-size: 100%;
+    background-size: contain;
     background-repeat:no-repeat;
     background-position:center center;
+	ba
 }
-.current-fragment{
+.fragment div{
+	height:100%;
+	width:100%;
+	background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+  	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+}
+.current-fragment div{
 	-webkit-box-shadow: inset 0px 0px 0px 7px #4B4;
 	-moz-box-shadow: inset 0px 0px 0px 7px #4B4;
     	-o-box-shadow: inset 0px 0px 0px 7px #4B4;
 	box-shadow: inset 0px 0px 2px 5px #4B4; 
 }
+
 .conductor{
 	height:100%;
 }
