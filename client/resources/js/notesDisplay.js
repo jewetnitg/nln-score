@@ -21,7 +21,7 @@ function initializeNotesDisplay(instrument){
 	            $('.fragment.current-fragment')
 	            ,getFragmentPath(data.piece,data.fragments[0],data.scoreType)
 	            ,data.scoreType);
-	    });	
+	     });	
 	});
 }
 
@@ -47,27 +47,23 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
-	console.log("document.images[newFragmentPath]: " +  document.images[newFragmentPath]);
-	console.log('$(".fragment div" ): ' + $(".fragment div" ));
-	console.log('typeof document.images[newFragmentPath]): '+typeof document.images[newFragmentPath]);
-	console.log(typeof document.images[newFragmentPath] != "undefined");
-	console.log((typeof document.images[newFragmentPath]) != "undefined");
-	console.log(typeof document.images[newFragmentPath] != undefined);
-	console.log((typeof document.images[newFragmentPath]) != undefined);
-	console.log((typeof document.images[newFragmentPath]) != "object");
-
-	if((typeof document.images[newFragmentPath]) != "undefined"){
-		if(($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
-			$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
-			$(element).html(document.images[newFragmentPath].clone());
-		}else{
-			$(element).html(document.images[newFragmentPath]);
+	console.log("newFragmentPath: " + newFragmentPath);
+	if(document.loadedImages){
+		if((typeof document.loadedImages[newFragmentPath]) == "object"){
+			if(($(".fragment div" )[0] == document.loadedImages[newFragmentPath][0] ||
+				$(".fragment div" )[1] == document.loadedImages[newFragmentPath][0])  ){
+				$(element).html(document.loadedImages[newFragmentPath].clone());
+			}else{
+				$(element).html(document.loadedImages[newFragmentPath]);
+			}
 		}
+	}else{
+		$(element).css('background-image', 'url(' + newFragmentPath + ')');
 	}
+
 }
 
 function getFragmentPath(piece,fragment,scoreType){
-    console.log(scoreType);
 	var instrument = "conductor";
 	if($("#instrument-select").size() > 0){
 		instrument = $("#instrument-select").val();
@@ -77,14 +73,14 @@ function getFragmentPath(piece,fragment,scoreType){
 	return path;
 }
 
-document.images;
 function preloadImages(instrument,done){
+	document.loadedImages = [];
 	$.get("/allimages/"+instrument+"/",function(data){
 			console.log("allimages: ",data);
 			var imageLoader = $("<div id='image-Loader'/>");
 			for(i in data){
-				document.images[data[i]] = $("<div/>").css('background-image', 'url(' +  data[i] + ')');
-				imageLoader.append(document.images[data[i]]);
+				document.loadedImages[data[i]] = $("<div/>").css('background-image', 'url(' +  data[i] + ')');
+				imageLoader.append(document.loadedImages[data[i]]);
 			}
 			$("body").append(imageLoader)
 			$("#imageLoader").remove();

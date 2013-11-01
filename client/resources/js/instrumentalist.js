@@ -20,7 +20,6 @@ $(document).ready(function () {
         $('option', select).remove();
 
         $.each(data, function (val, text) {
-            console.log("adding option", new Option(text, val));
             options[options.length] = new Option(text, val);
         });
 		$("#instrument-select").val($.url().param('instrument'));
