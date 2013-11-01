@@ -9,6 +9,7 @@ $(document).ready(function(){
 	initializeNotesDisplay($.url().param('instrument'));
 });
 
+
 function initializeNotesDisplay(instrument){
 	preloadImages(instrument,function(){
 	    $.get("/currentFragments", function(data) {
