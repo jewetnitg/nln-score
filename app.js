@@ -63,6 +63,19 @@ app.get('/allimages', function (req, res) {
 	res.json(imagePaths);
 });
 
+app.get('/allimages/:instrument', function (req, res) {
+	var paths = walk.sync(__dirname+"/pieces/"+config.piece+"/"+req.params.instrument+"/");
+	var imagePaths = [];
+	var j = 0;
+	for(i in paths){
+		if(paths[i].endsWith(".png")){
+			imagePaths[j] = "/imgfragments/"+paths[i].split(__dirname+"/pieces/")[1].split(".png")[0];
+			j++;
+		}
+	}
+	res.json(imagePaths);
+});
+
 app.get('/imgfragments/:piece/:instrument/:fragment', function (req, res) {
 	console.log('about to serve image',__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".png");
 	res.sendfile(__dirname+"/pieces/"+req.params.piece+"/"+req.params.instrument+"/"+req.params.fragment+".png");

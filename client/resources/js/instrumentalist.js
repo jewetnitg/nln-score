@@ -1,6 +1,8 @@
 $(document).ready(function () {
 	
-	$("#instrument-select").change(initializeNotesDisplay);
+	$("#instrument-select").change(function(){
+		initializeNotesDisplay($(this).val());
+	});
 
     console.log("about to get instruments");
     $.get("/instruments", function (data) {
@@ -24,7 +26,7 @@ $(document).ready(function () {
 		$("#instrument-select").val($.url().param('instrument'));
 
 		if ($.url().param('instrument')) {
-			initializeNotesDisplay();
+			initializeNotesDisplay($.url().param('instrument'));
 			$("html, body").animate({ scrollTop: $(document).height() });
 		}
     });

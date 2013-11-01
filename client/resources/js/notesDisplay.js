@@ -6,11 +6,11 @@ socket.on('play-next-fragment', function (data) {
 });
 
 $(document).ready(function(){
-	initializeNotesDisplay();
+	initializeNotesDisplay($.url().param('instrument'));
 });
 
-function initializeNotesDisplay(){
-	preloadImages(function(){
+function initializeNotesDisplay(instrument){
+	preloadImages(instrument,function(){
 	    $.get("/currentFragments", function(data) {
 	        console.log("currentFragments on initialize",data);
 	        changeScore(
@@ -67,8 +67,8 @@ function getFragmentPath(piece,fragment,scoreType){
 }
 
 document.images;
-function preloadImages(done){
-	$.get("/allimages",function(data){
+function preloadImages(instrument,done){
+	$.get("/allimages/"+instrument+"/",function(data){
 			console.log("allimages: ",data);
 			var imageLoader = $("<div id='image-Loader'/>");
 			for(i in data){
