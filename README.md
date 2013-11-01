@@ -26,4 +26,4 @@ this will download install all the javascript nodejs dependencies
 then to start the server run:
 -> node app.js
 the server is now running at
-http://localhost:8000
+http://localhost:3000
