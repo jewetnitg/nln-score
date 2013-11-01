@@ -52,7 +52,8 @@ function changeScoreImg(element,newFragmentPath){
 	console.log("typeof(document.images[newFragmentPath]): " + typeof(document.images[newFragmentPath]));
 	console.log('document.images[newFragmentPath]) != "undefined" : ' + document.images[newFragmentPath]) != "undefined");
 	console.log('document.images[newFragmentPath]) != undefined : ' + document.images[newFragmentPath]) != undefined);
-	if(typeof(document.images[newFragmentPath]) != "undefined" && 
+	console.log('document.images[newFragmentPath]) != undefined'+typeof document.images[newFragmentPath] != "undefined");
+	if(typeof document.images[newFragmentPath] != "undefined" && 
 		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
 		$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
 		$(element).html(document.images[newFragmentPath].clone());
