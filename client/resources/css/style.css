@@ -38,7 +38,7 @@ body{
 	-o-transition: all 0.1s ease-in-out;
 	transition: all 0.1s ease-in-out;
 }
-.current-fragment, .current-fragment div{
+.current-fragment div{
 	-webkit-box-shadow: inset 0px 0px 0px 7px #4B4;
 	-moz-box-shadow: inset 0px 0px 0px 7px #4B4;
     	-o-box-shadow: inset 0px 0px 0px 7px #4B4;
