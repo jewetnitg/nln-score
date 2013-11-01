@@ -56,12 +56,13 @@ function changeScoreImg(element,newFragmentPath){
 	console.log((typeof document.images[newFragmentPath]) != undefined);
 	console.log((typeof document.images[newFragmentPath]) != "object");
 
-	if(typeof document.images[newFragmentPath] == "object" && 
-		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
-		$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
-		$(element).html(document.images[newFragmentPath].clone());
-	}else{
-		$(element).html(document.images[newFragmentPath]);
+	if((typeof document.images[newFragmentPath]) != "undefined"){
+		if(($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
+			$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
+			$(element).html(document.images[newFragmentPath].clone());
+		}else{
+			$(element).html(document.images[newFragmentPath]);
+		}
 	}
 }
 
