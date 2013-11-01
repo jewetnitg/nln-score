@@ -47,6 +47,8 @@ function changeScoreXml(element,scoreXmlPath){
 }
 
 function changeScoreImg(element,newFragmentPath){
+	console.log("document.images[newFragmentPath]", document.images[newFragmentPath]);
+	console.log('$(".fragment div" )',$(".fragment div" ));
 	if(document.images[newFragmentPath] != undefined && 
 		($(".fragment div" )[0] == document.images[newFragmentPath][0] ||
 		$(".fragment div" )[1] == document.images[newFragmentPath][0])  ){
