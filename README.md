@@ -1,6 +1,8 @@
 nln-score
 =========
 
+This project has migrated to https://github.com/supradeus/nln-live
+
 A system for non linear performances with live musicians.
 
 1 Installation instructions
